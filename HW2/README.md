@@ -8,8 +8,7 @@ the observations.
 
 In the attachment of this exercise, there is a zip file whose content is as follows:
 
-model_init.txt
-
+### model_init.txt
 This file contains the initial probability of the states, the transition probability of the states and the distribution function of observations in each state.
 The general format of the file is as follows:
 
@@ -54,3 +53,16 @@ cases separated by a space is located. The number in front of transition also in
 the continuation, where the jth element of the i-th line represents aij) the probability of transition from state i to j). Finally, after the observation keyword, 
 the number of observation symbols is mentioned, and if this value is equal to M, then we will have M line in the continuation, where the jth element of the i-th line
 represents bij (the probability of observing the i-th symbol in the j-th state).
+
+### seq_model_01~05.txt
+These files contain training data for each model. Each line represents the training data. The viewing symbols are all uppercase letters of the English alphabet. For example, if the number of observation symbols is 4, the set of symbols is as follows
+ Is.
+
+### modellist.txt
+In each line of this file, the names of the files in which the parameters of the built models are placed are given.
+
+### testing_data1~2.txt
+The test data are located in these files.
+
+### testing_answer.txt
+Each line of this file is the name of the model that calculates the probability of observations for the data in the corresponding line in the file. The maximum is testing_data1.txt. The structure of the code files in your code folder will include two files, py.train and py.test, which are commands related to training. and include model evaluation. Also, you will have a py.hmm file that contains all the codes related to the implementation of the hidden Markov model (including Baum-Welch and Viterbi algorithms for model training and evaluation).
