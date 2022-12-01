@@ -1,4 +1,5 @@
 # HW2
+## Discrete Hidden Markov Model
 The purpose of this exercise is to implement the hidden Markov model using the Python language and to train and evaluate it on sequences of English alphabets.
 In this exercise, you are given the set of observation symbols, the set of states, the transition probability of the states, the initial probability of the states,
 and the distribution function of the observations in each state. Also, five independent sets of data are provided to train five separate hidden Markov models.
