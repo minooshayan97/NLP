@@ -6,7 +6,7 @@ After training five models using the Baum-Welch algorithm, which is based on the
 them on two sets of test data using the Viterbi algorithm. For each sample of the test data sets, you must determine which model maximizes the probability of 
 the observations.
 
-In the attachment of this exercise, there is a zip file whose content is as follows:
+## In the attachment of this exercise, there is a zip file whose content is as follows:
 
 ### model_init.txt
 This file contains the initial probability of the states, the transition probability of the states and the distribution function of observations in each state.
@@ -66,3 +66,20 @@ The test data are located in these files.
 
 ### testing_answer.txt
 Each line of this file is the name of the model that calculates the probability of observations for the data in the corresponding line in the file. The maximum is testing_data1.txt. The structure of the code files in your code folder will include two files, py.train and py.test, which are commands related to training. and include model evaluation. Also, you will have a py.hmm file that contains all the codes related to the implementation of the hidden Markov model (including Baum-Welch and Viterbi algorithms for model training and evaluation).
+
+## Structure of code files
+Your code folder will contain two files, py.train and py.test, which contain commands related to model training and evaluation. Also, you will have a py.hmm file that contains all the codes related to the implementation of the hidden Markov model (including Baum-Welch and Viterbi algorithms for model training and evaluation).
+
+## Input
+Input is given as an argument to your code during execution. for example,
+
+python train.py 100 ../model_init.txt ../seq_model_01.txt ../output/model_01.txt
+
+is to train the first model with 100 repetitions and
+
+python test.py ../modellist.txt ../testing_data1.txt ../output/result1.txt
+
+To evaluate the models, they are used on the first test set.
+
+## Output
+Your output is files containing model parameters in the same format as the txt.init_model file and with the names mentioned in the txt.modellist file, as well as txt.2~result1 files for each test file. Each line of the result file contains the name of the model that has the highest probability for the sequence of observations of the corresponding line in the data_testing file and the value of that probability, separated by a space. For example, 34-019640e.2 txt.01_model can be a line from the result file. Also, you are expected to send a report file containing the description of the work steps and the analysis of the obtained results. In this file, please also calculate the prediction accuracy for the data set of the txt.data1_testing file (reminder: the labels are available in the txt.answer_testing file).
