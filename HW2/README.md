@@ -56,8 +56,8 @@ the number of observation symbols is mentioned, and if this value is equal to M,
 represents bij (the probability of observing the i-th symbol in the j-th state).
 
 ### seq_model_01~05.txt
-These files contain training data for each model. Each line represents the training data. The viewing symbols are all uppercase letters of the English alphabet. For example, if the number of observation symbols is 4, the set of symbols is as follows
- Is.
+These files contain training data for each model. Each line represents the training data. The viewing symbols are all uppercase letters of the English alphabet. For example, if the number of observation symbols is 4, the set of symbols is as follows:
+$$ V = \set{A,B,C,D}$$
 
 ### modellist.txt
 In each line of this file, the names of the files in which the parameters of the built models are placed are given.
